@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .back-img {
+      position: absolute;
+      z-index: -1;
+    }
+    .input-style {
+      position: absolute;
+      background: transparent;
+      border: none;
+      outline-style: none;
+      width: 245px;
+      height: 20px;
+      left: 69px;
+    }
+    .input-style::placeholder{
+      font-size: 16px;
+      color: #979797;
+    }
+    #user_name {
+      top: 278px;
+    }
+    #user_phone {
+      top: 332px;
+    }
+    #pwd {
+      top: 388px;
+    }
+    #reg_btn {
+      position: absolute;
+      background: transparent;
+      border: none;
+      outline-style: none;
+      width: 30px;
+      height: 30px;
+      left: 173px;
+      top: 507px;
+      cursor: pointer;
+    }
+  </style>
+  <script src="../jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <img src="../public/img/registe_back.png" class="back-img" alt="">
+  <input type="text" placeholder="昵称" class="input-style" id="user_name">  
+  <input type="text" placeholder="手机号" class="input-style" id="user_phone">
+  <input type="password" placeholder="密码" class="input-style" id="pwd">
+  <button class="reg-btn" id="reg_btn"></button>
+
+  <script>
+    $(document).ready(function(){
+      $("#user_name").blur(function() {
+        sessionStorage.setItem('name', $(user_name).val());
+      })
+      $("#user_phone").blur(function() {
+        sessionStorage.setItem('phone', $(user_phone).val());
+      })
+      $("#pwd").blur(function() {
+        sessionStorage.setItem('password', $(pwd).val());
+      })
+      $("#reg_btn").click(function(){
+        sessionStorage.setItem('isReg', true);
+        sessionStorage.setItem('isLogin', true);
+        location.href = '../index/index.html';
+      });
+    });
+    
+  </script>
+</body>
+</html>

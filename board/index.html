@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="../jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <img src="../public/img/GIF/首次操作提示-留言本.gif" class="back-img" alt="">
+  <a href="../messageBox/index.html" class="btn to-box-btn"></a>
+  <!-- <button id="right_btn"></button> -->
+  <span id="user_name"></span>
+
+  <div class="number-board">
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+    <li class="num-btn"></li>
+  </div>
+
+  <a href="../messageNote/index.html" class="btn to-note-btn"></a>
+  <script>
+    $(document).ready(function(){
+      var user_name = sessionStorage.getItem('name');
+      $("#user_name").html(user_name);
+    });
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="../jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <img src="../public/img/留言箱-未听留言@3x.png" class="back-img" id="back_img" alt="">
+  <!-- <a href="../" class="btn to-box-btn"></a> -->
+  <button class="btn" id="back_btn"></button>
+
+  <div>
+    <div class="btn tab-rec" id="tab_rec"></div>
+    <div class="btn tab-req" id="tab_req"></div>
+  </div>
+
+  <span id="user_name"></span>
+
+  <a href="" class="btn to-note-btn"></a>
+  <script>
+    $(document).ready(function(){
+      var user_name = sessionStorage.getItem('name');
+      $("#user_name").html(user_name);
+      $("#back_btn").click(function() {
+        window.history.back();
+      });
+
+      $("#tab_rec").click(function() {
+        $("#back_img").attr('src', '../public/img/留言箱-未听留言@3x.png');
+        console.log($("#back_img").attr('src'))
+      })
+      $("#tab_req").click(function() {
+        $("#back_img").attr('src', '../public/img/留言箱-等你回复@3x.png')
+        console.log($("#back_img").attr('src'))
+      })
+    });
+    
+  </script>
+</body>
+</html>

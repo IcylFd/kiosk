@@ -29,17 +29,18 @@
   <script src="../jquery-3.4.1.min.js"></script>
 </head>
 <body>
-  <img src="../public/img/GIF/首页便利店.gif" class="back-img" alt="">
-  <button class="welcome-btn" id="in_btn"></button>
+  <!-- <img src="../public/img/GIF/首次操作提示-留言本.gif" class="back-img" alt=""> -->
+  <input id="user_phone" type="text" placeholder="手机号">
+  <input type="password" id="pwd" placeholder="密码">
+  <button class="login-btn" id="login_btn">go</button>
 
   <script>
     $(document).ready(function(){
-      $("#in_btn").click(function(){
-      sessionStorage.getItem('isReg') 
-      && sessionStorage.getItem('isLogin') 
-      && sessionStorage.getItem('isLogin') === 'true' ? 
-        location.href = '../board/index.html'
-      : location.href = '../registe/index.html';
+      $("#login_btn").click(function() {
+        if(sessionStorage.getItem('password') === $('#pwd').val() && sessionStorage.getItem('phone') === $('#user_phone').val()) {
+          sessionStorage.setItem('isLogin', true);
+          location.href = '../index/index.html';
+        }
       });
     });
     

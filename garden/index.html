@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .back-img {
+      position: absolute;
+      z-index: -1;
+    }
+    #back_btn {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 53px;
+      left: 20px;
+      cursor: pointer;
+    }
+    #card_btn {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 405px;
+      left: 140px;
+      cursor: pointer;
+    }
+    .garden_card_show {
+      display: block;
+    }
+    .garden_card_hide {
+      display: none;
+    }
+    .garden_card .mask {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .3);
+    }
+    .garden_card .card {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      background: #000;
+    }
+  </style>
+  <script src="../jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <img src="../public/img/GIF/花话.gif" class="back-img" alt="">
+  <div class="garden_card garden_card_hide" id="garden_card">
+    <div class="mask" id="mask"></div>
+    <div class="card"></div>
+  </div>
+  <button id="back_btn"></button>
+  <button id="card_btn"></button>  
+
+  <script>
+    $(document).ready(function(){
+      $("#back_btn").click(function() {
+        window.history.back();
+      });
+      $("#card_btn").click(function() {
+        $("#garden_card").addClass('garden_card_show');
+        $("#garden_card").removeClass('garden_card_hide');
+      });
+      $("#mask").click(function() {
+        $("#garden_card").addClass('garden_card_hide');
+        $("#garden_card").removeClass('garden_card_show');
+      })
+    });
+    
+  </script>
+</body>
+</html>
