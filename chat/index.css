@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.btn {
+  display: block;
+  position: absolute;
+  background: transparent;
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+}
+.back-img {
+  position: absolute;
+  z-index: -1;
+}
+#rec_msg {
+  position: absolute;
+  width: 197px;
+  height: 59px;
+  top: 136px;
+  left: 105px;
+  background: #ccc;
+  font-size: 18px;
+  color: #3B3D43;
+  padding: 10px;
+}
+

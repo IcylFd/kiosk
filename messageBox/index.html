@@ -20,7 +20,8 @@
 
   <span id="user_name"></span>
 
-  <a href="" class="btn to-note-btn"></a>
+  <a href="../chat/index.html" id="to_chat" class="btn to-chat-btn"></a>
+
   <script>
     $(document).ready(function(){
       var user_name = sessionStorage.getItem('name');
@@ -31,11 +32,11 @@
 
       $("#tab_rec").click(function() {
         $("#back_img").attr('src', '../public/img/留言箱-未听留言@3x.png');
-        console.log($("#back_img").attr('src'))
+        $("#to_chat").attr('href', '../chat/index.html');
       })
       $("#tab_req").click(function() {
         $("#back_img").attr('src', '../public/img/留言箱-等你回复@3x.png')
-        console.log($("#back_img").attr('src'))
+        $("#to_chat").attr('href', '../recChat/index.html');
       })
     });
     

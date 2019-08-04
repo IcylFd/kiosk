@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.btn {
+  display: block;
+  position: absolute;
+  background: transparent;
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+}
+.back-img {
+  position: absolute;
+  z-index: -1;
+}
+#rep_msg {
+  position: absolute;
+  width: 246px;
+  height: 142px;
+  top: 255px;
+  right: 12px;
+  background: #ccc;
+  font-size: 18px;
+  color: #3B3D43;
+  padding: 10px;
+}
+

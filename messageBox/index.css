@@ -34,6 +34,12 @@
   right: 20px;
 }
 
+.to-chat-btn {
+  width: 338px;
+  height: 220px;
+  top: 162px;
+  left: 20px;
+}
 #user_name {
   position: absolute;
   top: 60px;

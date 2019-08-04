@@ -10,7 +10,8 @@
 </head>
 <body>
   <img src="../public/img/输入心情@3x.png" class="back-img" alt="">
-  <a href="../" class="btn to-box-btn"></a>
+  <textarea name="mood_text" id="mood" cols="45" rows="15" placeholder="开始写信..."></textarea>
+  <div class="btn send-btn" id="send_btn">发送</div>
   <span id="user_name"></span>
 
   <a href="" class="btn to-note-btn"></a>
@@ -18,8 +19,11 @@
     $(document).ready(function(){
       var user_name = sessionStorage.getItem('name');
       $("#user_name").html(user_name);
-      $("#in_btn").click(function(){
-        location.href = '../garden/index.html';
+      $("#send_btn").click(function(){
+        var nowDate = new Date();
+        sessionStorage.setItem('sendMsg',$("#mood").val());
+        sessionStorage.setItem('sendTime', nowDate.toLocaleDateString());
+        location.href = '../chat/index.html';
       });
     });
     

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <img src="../public/img/收到别人的留言-3@3x.png" class="back-img" alt="">
+  <div id="rep_msg"></div>
+  <a href="../" class="btn to-box-btn"></a>
+
+  <a href="" class="btn to-note-btn"></a>
+  <script>
+    $(document).ready(function(){
+      var rec_msg = sessionStorage.getItem('sendMsg');
+      $("#rec_msg").html(rec_msg);
+      $("#in_btn").click(function(){
+        location.href = '../garden/index.html';
+      });
+    });
+    
+  </script>
+</body>
+</html>
